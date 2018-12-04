@@ -286,7 +286,6 @@ summary(ca)
 llca <- wildCoxBand(Surv(time,status!=0)~prop(diabetes)+prop(sex)+prop(cage),tTRACE,seq(0,7,by=0.01),B=1000)
 llca0 <- wildCoxBand(Surv(time,status!=0)~prop(diabetes0)+prop(sex)+prop(cage),tTRACE,seq(0,7,by=0.01),B=1000)
 
-
 pca <- predict(ca,X=rbind(c(1),c(1)),Z=rbind(c(0,0,0),c(1,0,0)))
 plot(pca,multiple=1,uniform=1,col=1:2,se=1,lty=1:2)
 ###
